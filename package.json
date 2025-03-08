@@ -6,8 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "eslint": "eslint .",
+    "preview": "vite preview",
+    "eslint:fix": "yarn eslint --fix",
+    "stylelint:fix": "yarn stylelint --fix",
+    "stylelint": "stylelint --allow-empty-input \"**/*.{css,scss}\"",
+    "type-check": "tsc --noEmit",
+    "lint": "yarn eslint:fix && yarn stylelint:fix && yarn type-check"
   },
   "dependencies": {
     "react": "^19.0.0",
@@ -20,9 +25,18 @@
     "@types/react-dom": "^19.0.4",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.21.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
+    "prettier": "^3.5.3",
+    "sass": "^1.85.1",
+    "stylelint": "^16.15.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recess-order": "^6.0.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-order": "^6.0.4",
     "typescript": "~5.7.2",
     "typescript-eslint": "^8.24.1",
     "vite": "^6.2.0"
