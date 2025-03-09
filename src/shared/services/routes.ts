@@ -3,6 +3,10 @@ export const routes = {
     getLink: () => '/',
     pathname: '/',
   },
+  notFound: {
+    getLink: () => '*',
+    pathname: '*',
+  },
   randomPost: {
     getLink: () => '/random-post',
     pathname: '/random-post',
