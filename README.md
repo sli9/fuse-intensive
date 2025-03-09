@@ -1,54 +1,39 @@
-# React + TypeScript + Vite
+# React + TypeScript + Vite Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* React 19.0.0
+* TypeScript 5.7.2
+* Vite 6.2.0
+* ESLint with recommended configurations
+* Support for React Router 7.3.0
+* Pre-configured with Sass and CSS modules
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Clone the repository: `git clone https://github.com/your-username/your-repo-name.git`
+2. Install dependencies: `yarn install`
+3. Start the development server: `yarn dev`
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Usage
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+* Create a new React component: `src/app/components/MyComponent.tsx`
+* Create a new page: `src/pages/my-page.tsx`
+* Use React Router to navigate between pages: [src/app/App.tsx](cci:7://file:///D:/fuse-intensive/src/app/App.tsx:0:0-0:0)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## API Documentation
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+* [React Router API](https://reactrouter.com/web/api)
+* [Vite API](https://vitejs.dev/api/)
+
+## Contributing
+
+* Fork the repository and create a new branch: `git checkout -b my-feature`
+* Make changes and commit: `git commit -m "My feature"`
+* Open a pull request: `git push origin my-feature`
+
+## License
+
+* MIT License
