@@ -1,0 +1,57 @@
+:root {
+  font-family: Schoolbell, cursive;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #213547;
+  background-color: #fff;
+  font-synthesis: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.2em;
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+}
+
+button {
+  padding: 0.6em 4.2em;
+  font-family: inherit;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: inherit;
+  border: 1px solid currentcolor;
+  border-radius: 8px;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #ccc;
+}
+
+button:active {
+  box-shadow: inset 3px 3px 5px rgb(0 0 0 / 30%),
+  inset -3px -3px 5px rgb(255 255 255 / 10%);
+  transform: translateY(2px);
+}
