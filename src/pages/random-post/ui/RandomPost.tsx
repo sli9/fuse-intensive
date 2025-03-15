@@ -9,9 +9,13 @@ export const RandomPost = () => {
 
   const handleGetPostHeader = () => {
     postsApi
-      .getPostHeader()
+      .getPosts()
       .then((response) => {
-        setPostHeader(response.data.title);
+        const randomIndex = Math.floor(Math.random() * response.data.length);
+        return response.data[randomIndex];
+      })
+      .then((response) => {
+        setPostHeader(response.title);
         setError(null);
       })
       .catch((error: AxiosError) => {
