@@ -8,6 +8,8 @@ export const Header = () => {
       <Link to={routes.main.getLink()}>Главная</Link>
       <span> | </span>
       <Link to={routes.randomPost.getLink()}>Рандомный пост</Link>
+      <span> | </span>
+      <Link to={routes.landing.getLink()}>Лэндинг</Link>
     </div>
   );
 };

@@ -1,0 +1,13 @@
+@import "./variables";
+@import "./mixins";
+
+.container {
+  min-height: 100vh;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 50px 10px;
+  @include setupFlex(center, center);
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: $textColor;
+}

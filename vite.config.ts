@@ -8,6 +8,7 @@ export default defineConfig({
       '@shared': '/src/shared',
       '@app': '/src/app',
       '@pages': '/src/pages',
+      '@assets': '/src/assets',
     },
   },
   plugins: [react()],
