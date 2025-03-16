@@ -11,4 +11,8 @@ export const routes = {
     getLink: () => '/random-post',
     pathname: '/random-post',
   },
+  landing: {
+    getLink: () => '/landing',
+    pathname: '/landing',
+  },
 };

@@ -1,0 +1,46 @@
+@import "@shared/styles/mixins";
+@import "@shared/styles/variables";
+
+.exampleHomework {
+  font-family: Arial, sans-serif;
+
+ .visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .block, .screen {
+    @include setupFlex(center, center);
+    flex-direction: column;
+    height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .screen {
+    &:nth-child(odd) {
+      background-color: $secondaryBgColor;
+    }
+  }
+
+  .cardsContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
