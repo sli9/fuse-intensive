@@ -4,7 +4,7 @@
 .exampleHomework {
   font-family: Arial, sans-serif;
 
- .visuallyHidden {
+  .visuallyHidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -17,30 +17,23 @@
     overflow: hidden;
   }
 
-  .block, .screen {
+  .screen, .block {
     @include setupFlex(center, center);
     flex-direction: column;
     height: 100vh;
-    padding: 20px;
     text-align: center;
   }
 
   .screen {
-    &:nth-child(odd) {
-      background-color: $secondaryBgColor;
-    }
-  }
-
-  .cardsContainer {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
+        &:nth-child(odd) {
+          background-color: $secondaryBgColor;
+        }
+      }
 }
 
-
-
-
-
-
-
+@media (min-width: 768px) {
+  .cardsContainer {
+    @include setupFlex(center, center);
+    gap: 20px;
+  }
+}

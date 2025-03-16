@@ -1,7 +1,13 @@
 #root {
   max-width: 1280px;
-  padding: 2rem;
+  padding: 1rem;
   margin: 0 auto;
   font-family: Schoolbell, cursive;
   text-align: center;
+}
+
+@media (width >= 768px) {
+  #root {
+    padding: 2rem;
+  }
 }

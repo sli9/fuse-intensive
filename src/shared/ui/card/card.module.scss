@@ -1,7 +1,7 @@
 @import "@shared/styles/variables";
 
 .card {
-  width: 300px;
+  min-width: 200px;
   padding: 20px;
   margin: 20px;
   overflow: hidden;
@@ -9,4 +9,10 @@
   border: 1px solid $secondaryColor;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%);
+}
+
+@media (min-width: 768px) {
+  .card {
+    min-width: 300px;
+  }
 }
