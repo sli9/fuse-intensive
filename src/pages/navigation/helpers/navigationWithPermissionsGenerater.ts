@@ -1,23 +1,21 @@
 import { NavigationItem } from '@shared/types/navigation.types.ts';
 import { Route } from '@shared/types/routes.types.ts';
 
-export const generateNavigationListWithPermissions = async (
+export const generateNavigationListWithPermissions = (
   navigationList: NavigationItem[],
-  checkPermission: (routeName: string) => Promise<boolean>
-): Promise<NavigationItem[]> => {
-  return Promise.all(
-    navigationList.map(async (secondLevel) => ({
+  checkPermission: (routeName: string) => boolean
+): NavigationItem[] => {
+  return navigationList
+    .map((secondLevel) => ({
       ...secondLevel,
-      children: await Promise.all(
-        secondLevel.children.map(async (thirdLevel) => ({
+      children: secondLevel.children
+        .map((thirdLevel) => ({
           ...thirdLevel,
-          children: await Promise.all(
-            (thirdLevel as NavigationItem).children.map(async (route) =>
-              (await checkPermission(route.name)) ? route : null
-            )
-          ).then((res) => res.filter(Boolean) as Route[]),
+          children: (thirdLevel as NavigationItem).children
+            .map((route) => (checkPermission(route.name) ? route : null))
+            .filter(Boolean) as Route[],
         }))
-      ).then((res) => res.filter((item) => item.children.length > 0)),
+        .filter((item) => item.children.length > 0),
     }))
-  ).then((res) => res.filter((item) => item.children.length > 0));
+    .filter((item) => item.children.length > 0);
 };

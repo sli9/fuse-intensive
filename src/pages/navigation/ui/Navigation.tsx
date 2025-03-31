@@ -1,8 +1,8 @@
 import { routes } from '@shared/services';
 import { NavigationItem } from '@shared/types/navigation.types.ts';
-import { NavigationList } from '@pages/navigation/ui/NavigationList.tsx';
+import { NavigationList } from '@pages/navigation/ui/navigation-list/NavigationList.tsx';
 import { generateNavigationListWithPermissions } from '@pages/navigation/helpers/navigationWithPermissionsGenerater.ts';
-import { useEffect, useState } from 'react';
+import s from './navigation.module.scss';
 
 const USER_READ_PERMISSIONS = [
   'vacancies',
@@ -12,14 +12,14 @@ const USER_READ_PERMISSIONS = [
   'partners',
 ];
 
-// const checkHasUserPermission = (routeName: string) => {
-//   return USER_READ_PERMISSIONS.includes(routeName);
-// };
-
-// Со звездочкой проверка прав асинхронная
-const checkHasUserPermission = async (routeName: string) => {
+const checkHasUserPermission = (routeName: string) => {
   return USER_READ_PERMISSIONS.includes(routeName);
 };
+
+// Со звездочкой проверка прав асинхронная
+// const checkHasUserPermission = async (routeName) => {
+// 	return USER_READ_PERMISSIONS.includes(routeName)
+// }
 
 const navigationList: NavigationItem[] = [
   {
@@ -52,23 +52,13 @@ const navigationList: NavigationItem[] = [
 ];
 
 export function Navigation() {
-  const [navigationListWithPermission, setNavigationListWithPermission] =
-    useState<NavigationItem[]>([]);
-
-  useEffect(() => {
-    const fetchNavigationListWithPermission = async () => {
-      const navigationListWithPermission =
-        await generateNavigationListWithPermissions(
-          navigationList,
-          checkHasUserPermission
-        );
-      setNavigationListWithPermission(navigationListWithPermission);
-    };
-    fetchNavigationListWithPermission();
-  }, []);
+  const navigationListWithPermission = generateNavigationListWithPermissions(
+    navigationList,
+    checkHasUserPermission
+  );
 
   return (
-    <nav className="container">
+    <nav className={s.navContainer}>
       <NavigationList navigationList={navigationListWithPermission} />
     </nav>
   );
