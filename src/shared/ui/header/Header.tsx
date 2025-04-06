@@ -6,11 +6,8 @@ export const Header = () => {
   return (
     <div className={s.header}>
       <Link to={routes.main.getLink()}>Главная</Link>
-      <span> | </span>
       <Link to={routes.randomPost.getLink()}>Рандомный пост</Link>
-      <span> | </span>
       <Link to={routes.landing.getLink()}>Лэндинг</Link>
-      <span> | </span>
       <Link to={routes.navigation.getLink()}>Навигация</Link>
     </div>
   );

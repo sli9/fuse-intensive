@@ -1,4 +1,4 @@
-import { NavigationItem } from '@shared/types/navigation.types.ts';
+import { NavigationItem } from '@pages/navigation/ui/types/navigation.types.ts';
 import { Route } from '@shared/types/routes.types.ts';
 
 export const generateNavigationListWithPermissions = (

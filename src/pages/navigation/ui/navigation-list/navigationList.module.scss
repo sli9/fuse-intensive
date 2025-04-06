@@ -1,3 +1,31 @@
+@import '@shared/styles/variables';
+
+.navContainer {
+  display: flex;
+  justify-content: center;
+
 .navList {
   text-align: left;
+
+  .menuItem {
+    list-style: none;
+    padding: 10px;
+    font-size: 16px;
+
+    a {
+      text-decoration: none;
+      color: $textColor;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $secondaryColor;
+      }
+    }
+
+    .title {
+      font-weight: bold;
+    }
+  }
+}
+
 }

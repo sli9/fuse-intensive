@@ -1,8 +1,7 @@
 import { routes } from '@shared/services';
-import { NavigationItem } from '@shared/types/navigation.types.ts';
+import { NavigationItem } from './types/navigation.types.ts';
+import { generateNavigationListWithPermissions } from '../helpers/navigationWithPermissionsGenerater.ts';
 import { NavigationList } from '@pages/navigation/ui/navigation-list/NavigationList.tsx';
-import { generateNavigationListWithPermissions } from '@pages/navigation/helpers/navigationWithPermissionsGenerater.ts';
-import s from './navigation.module.scss';
 
 const USER_READ_PERMISSIONS = [
   'vacancies',
@@ -57,9 +56,5 @@ export function Navigation() {
     checkHasUserPermission
   );
 
-  return (
-    <nav className={s.navContainer}>
-      <NavigationList navigationList={navigationListWithPermission} />
-    </nav>
-  );
+  return <NavigationList navigationList={navigationListWithPermission} />;
 }
