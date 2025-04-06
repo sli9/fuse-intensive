@@ -17,5 +17,11 @@
     &:hover {
       color: $secondaryColor;
     }
+
+    &:not(:last-child)::after {
+      content: " | ";
+      margin-left: 1em;
+      color: $textColor;
+    }
   }
 }
