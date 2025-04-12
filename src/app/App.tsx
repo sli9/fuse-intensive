@@ -7,6 +7,7 @@ import { NotFound } from '@pages/not-found';
 import { Navigation } from '@pages/navigation';
 import { LandingPage } from '@pages/landing';
 import { Header } from '@shared/ui/header';
+import { Articles, CreateArticle } from '@pages/articles';
 
 function App() {
   return (
@@ -17,6 +18,11 @@ function App() {
         <Route path={routes.randomPost.pathname} element={<RandomPost />} />
         <Route path={routes.landing.pathname} element={<LandingPage />} />
         <Route path={routes.navigation.pathname} element={<Navigation />} />
+        <Route path={routes.articles.pathname} element={<Articles />} />
+        <Route
+          path={routes.createArticle.pathname}
+          element={<CreateArticle />}
+        />
         <Route path={routes.notFound.pathname} element={<NotFound />} />
       </Routes>
     </>

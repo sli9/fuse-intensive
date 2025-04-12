@@ -6,6 +6,10 @@
   text-align: center;
 }
 
+ul {
+  list-style: none;
+}
+
 @media (width >= 768px) {
   #root {
     padding: 2rem;
