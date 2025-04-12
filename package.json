@@ -15,10 +15,14 @@
     "lint": "yarn eslint:fix && yarn stylelint:fix && yarn type-check"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.0.1",
+    "@tanstack/react-query": "^5.72.2",
     "axios": "^1.8.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.3.0"
+    "react-hook-form": "^7.55.0",
+    "react-router": "^7.3.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

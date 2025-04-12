@@ -9,6 +9,7 @@ export const Header = () => {
       <Link to={routes.randomPost.getLink()}>Рандомный пост</Link>
       <Link to={routes.landing.getLink()}>Лэндинг</Link>
       <Link to={routes.navigation.getLink()}>Навигация</Link>
+      <Link to={routes.articles.getLink()}>Статьи</Link>
     </div>
   );
 };

@@ -1,8 +1,5 @@
-import { Routes } from '@shared/types/routes.types.ts';
-
-export const routes: Routes = {
+export const routes = {
   main: {
-    name: 'main',
     getLink: () => '/',
     pathname: '/',
     text: 'Главная',
@@ -60,5 +57,17 @@ export const routes: Routes = {
     pathname: 'partners',
     getLink: () => '/partners',
     text: 'Клиенты',
+  },
+  articles: {
+    name: 'articles',
+    pathname: 'articles',
+    getLink: () => '/articles',
+    text: 'Статьи',
+  },
+  createArticle: {
+    name: 'createArticles',
+    pathname: 'articles/create',
+    getLink: () => '/articles/create',
+    text: 'Создать cтатью',
   },
 };
